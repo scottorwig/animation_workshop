@@ -10,8 +10,8 @@
 	/* CSS for the scrollers */
 	div.horizontal_scroller, div.vertical_scroller{
 		position:relative;
-		height:24px;
-		width:500px;
+		height:30px;
+		width:100%;
 		display:block;
 		overflow:hidden;
 		border:#CCCCCC 1px solid;
@@ -20,7 +20,7 @@
 		position:absolute;
 		white-space:nowrap;
 		font-family:'Trebuchet MS',Arial;
-		font-size:18px;
+		font-size:24px;
 		font-weight:bold;
 		color:#000000;
 	}
@@ -109,7 +109,7 @@ $(document).ready(function() {
 <b>Simple scrolling text...</b>
 <div class="horizontal_scroller" id="no_mouse_events">
 	<div class="scrollingtext">
-		this is a scrolling text!
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
 	</div>
 </div>
 
@@ -151,6 +151,14 @@ $(document).ready(function() {
 		text!
 	</div>
 </div>
+
+<div class="vertical_scroller" style="width:100%; height:200px">
+	<div class="scrollingtext" style="margin-left:20px">
+		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+
+	</div>
+</div>
+
 
 
 </div>
