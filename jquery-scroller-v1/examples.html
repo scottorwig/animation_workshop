@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery Scroller Playground</title>
+<title>jQuery Scroller plugin v.1.0 by Max Vergelli</title>
 <meta name="description" content="jQuery Scroller plugin developed by Max Vergelli" />
 <meta name="keywords" content="jquery, scroller, plugin, max, vergelli" />
 <style type="text/css">
@@ -10,8 +10,8 @@
 	/* CSS for the scrollers */
 	div.horizontal_scroller, div.vertical_scroller{
 		position:relative;
-		height:50px;
-		width:100%;
+		height:24px;
+		width:500px;
 		display:block;
 		overflow:hidden;
 		border:#CCCCCC 1px solid;
@@ -20,7 +20,7 @@
 		position:absolute;
 		white-space:nowrap;
 		font-family:'Trebuchet MS',Arial;
-		font-size:48px;
+		font-size:18px;
 		font-weight:bold;
 		color:#000000;
 	}
@@ -92,9 +92,46 @@ $(document).ready(function() {
 //-->
 </script>
 </head>
-
-
-
+<body style="margin:30px;">
+<table width="804" border="0" cellpadding="0" cellspacing="5">
+  <tr>
+    <td width="289" valign="top"><img src="logo.gif" alt="jQuery Scroller" style="border:0px;" /></td>
+  <td width="871" valign="top">
+	  <h1>jQuery Scroller v.1.0 </h1>
+		<p>developed by  Max Vergelli &copy; 2012<br />
+		<br />
+    For support visit <br />
+    <a href="http://www.maxvergelli.com/jquery-scroller/">http://www.maxvergelli.com/jquery-scroller/</a><br />
+	  </p>
+		<p>License: <br />
+          <a href="http://www.maxvergelli.com/jquery-scroller/license/">http://www.maxvergelli.com/jquery-scroller/license/</a><br />
+	      <br />
+	      <br />
+	  </p></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+		<h2>Create scrolling text and animations with jQuery!</h2>
+		<p align="justify">With jQuery Scroller you can create easily smart scrolling text, news ticker, or image animations with few lines of code in jQuery! <br />
+		  <br />
+		  The plugin support HTML5 and it is fully compatible with Internet   Explorer, Firefox, Chrome, Opera and Safari. It needs jQuery v.1.4.1 or   later versions to run. jQuery Scroller is licensed under the <a title="MIT license" href="http://www.maxvergelli.com/jquery-scroller/license/">MIT license</a>; You are free to use the plugin in commercial projects as long as the copyright header is left intact.<br />
+	      <br />
+		  You can set many options like...<br />
+		  <br />
+		  - velocity, horizontal or vertical direction, starting/ending points, finite or infinite loops, move type ('linear' or 'ping pong'), <br />
+		  - configure mouseover/mouseout events or control programmatically scrolling functions from an external element,<br />
+		  - play, pause, resume scrolling animations or set a custom  pointer.<br />
+		</p>
+	</td>
+  </tr>
+</table>
+<div style="margin-left:40px">
+<br />
+<h3>List of scrolling examples:</h3>
+<p>Just take a look at the source of this page to learn how the scripts work.</p>
+<br />
+<br />
+  
 <b>Animating an image...</b>
 <div class="horizontal_scroller" id="soccer_ball_container">
 	<div class="scrollingtext">
@@ -109,7 +146,7 @@ $(document).ready(function() {
 <b>Simple scrolling text...</b>
 <div class="horizontal_scroller" id="no_mouse_events">
 	<div class="scrollingtext">
-		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+		this is a scrolling text!
 	</div>
 </div>
 
@@ -152,28 +189,12 @@ $(document).ready(function() {
 	</div>
 </div>
 
-<div class="vertical_scroller" style="width:100%; height:200px">
-	<div class="scrollingtext" style="margin-left:20px">
-		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+<br />
+<br />
+<br />
 
-	</div>
+
+<h3>jQuery Scroller  &copy; 2012 Max Vergelli</h3>
 </div>
-
-
-
-</div>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1357919-9']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 </body>
 </html>
