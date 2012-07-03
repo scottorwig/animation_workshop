@@ -10,11 +10,10 @@
 	/* CSS for the scrollers */
 	div.horizontal_scroller, div.vertical_scroller{
 		position:relative;
-		height:50px;
+		height:100px;
 		width:100%;
 		display:block;
 		overflow:hidden;
-		border:#CCCCCC 1px solid;
 	}
 	div.scrollingtext{
 		position:absolute;
@@ -22,7 +21,7 @@
 		font-family:'Trebuchet MS',Arial;
 		font-size:48px;
 		font-weight:bold;
-		color:#000000;
+		color:white;
 	}
 
 	/* style needed only for this example */
@@ -50,6 +49,7 @@ $(document).ready(function() {
 											onstartup: 	 'play',
 											cursor: 	 'pointer'
 										});
+										
 	/*
 		All possible values for options...
 		
@@ -66,7 +66,7 @@ $(document).ready(function() {
 	*/
 
 	//how to overwrite options after setup and without deleting the other settings...
-	$('#no_mouse_events').ResetScroller({	onmouseover: 'play', onmouseout: 'play'   });
+	$('#bottom_ticker').ResetScroller({	velocity: 92   });
 	$('#scrollercontrol').ResetScroller({	velocity: 85, startfrom: 'left'   });
 
 	//if you need to remove the scrolling animation, uncomment the following line...
@@ -92,75 +92,13 @@ $(document).ready(function() {
 //-->
 </script>
 </head>
-
-
-
-<b>Animating an image...</b>
-<div class="horizontal_scroller" id="soccer_ball_container">
-	<div class="scrollingtext">
-		<img src="soccer_ball.gif" id="soccer_ball" />
-	</div>
 </div>
-
-<br />
-<br />
-<br />
-
-<b>Simple scrolling text...</b>
-<div class="horizontal_scroller" id="no_mouse_events">
-	<div class="scrollingtext">
-		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+<div id="toolbar" style="position: fixed; bottom: 0px; left: 0px; width: 100%; background-color: black;">
+	<div class="horizontal_scroller" id="bottom_ticker">
+		<div class="scrollingtext">
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+		</div>
 	</div>
-</div>
-
-<br />
-<br />
-<br />
-
-<b>Scrolling text that pause on mouse over and resume on mouse out...</b>
-<div class="horizontal_scroller">
-	<div class="scrollingtext">
-		this is a simple scrolling text!
-	</div>
-</div>
-
-<br />
-<br />
-<br />
-
-<b>It's possible to control the scrolling outside the scroller...</b>
-<div class="horizontal_scroller" id="scrollercontrol">
-	<div class="scrollingtext">
-		this is another horizontal scrolling text!
-	</div>
-</div>
-<br />
-<span id="play_scrollercontrol">play</span> <span id="stop_scrollercontrol">pause</span>
-
-<br />
-<br />
-<br />
-<br />
-
-<b>Vertical scrolling</b>
-<div class="vertical_scroller" style="width:150px; height:200px">
-	<div class="scrollingtext" style="margin-left:20px">
-		just a<br />
-		vertical<br />
-		scrolling<br />
-		text!
-	</div>
-</div>
-
-<div class="vertical_scroller" style="width:100%; height:200px">
-	<div class="scrollingtext" style="margin-left:20px">
-		Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-
-	</div>
-</div>
-
-
-
 </div>
 <script type="text/javascript">
 
