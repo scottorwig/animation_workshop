@@ -8,6 +8,7 @@
 <style type="text/css">
 	body{
 		background-color: #0D5AE1;
+		font-family: Arial, Helvetica, sans-serif;
 	}
 	/* CSS for the scrollers */
 	div.horizontal_scroller, div.vertical_scroller{
@@ -26,27 +27,35 @@
 		color:white;
 	}
 
-	/* style needed only for this example */
-	span{margin:5px;padding:8px 12px;width:150px;background-color:#0066CC;color:#FFFFFF;border:#003366 1px solid;display:block;float:left;text-align:center;}
-	span:hover{background-color:#0099CC}
-
-
 }
 
 .container {width: 960px; margin: 0 auto; overflow: hidden;}
 
-.clock {width:25; margin:0 auto; padding:30px; color:#fff; }
+.clock {
+	font-size:36px;
+	color:#fff; 
+	height:100px;
+	position: fixed;
+	top: 0px; 
+	left: 0px; 
+	width: 100%; 
+	background-color: black;
+	}
 
 #Date{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size:36px;
 	text-align:right;
 	}
 
-ul { width:800px; margin:0 auto; padding:0px; list-style:none; text-align:right; }
-ul li { display:inline; font-size: 56px; text-align:center; font-family: Arial, Helvetica, sans-serif;}
+ul {
+	text-align:right;
+	}
 
-#point { position:relative; padding-left:10px; padding-right:10px; }
+ul li {
+	display:inline;
+	text-align:center;
+}
+
+#point { position:relative; padding-left:1px; padding-right:1px; }
 
 </style>
 <script src="jquery-1.7.2.min.js" type="text/javascript"></script>
@@ -62,7 +71,7 @@ var newDate = new Date();
 // Extract the current date from Date object
 newDate.setDate(newDate.getDate());
 // Output the day, date, month and year   
-$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+$('#Date').html(dayNames[newDate.getDay()] + ", " + monthNames[newDate.getMonth()] + " " + newDate.getDate() + ', ' + newDate.getFullYear());
 
 setInterval( function() {
 	// Create a newDate() object and extract the seconds of the current time on the visitor's
@@ -146,11 +155,13 @@ $(document).ready(function() {
 </head>
 
 <div class="clock">
-   <div id="Date"></div>
+   <div></div>
       <ul>
-          <li id="hours"></li>
-          <li id="point">:</li>
-          <li id="min"></li>
+      	 <li id='Date'></li>
+      	 <li> - </li>
+         <li id="hours"></li>
+         <li id="point">:</li>
+         <li id="min"></li>
          <!-- <li id="point">:</li> -->
          <!-- <li id="sec"></li> -->
       </ul>
