@@ -97,6 +97,30 @@ setInterval( function() {
 });
 </script>
 <script type="text/javascript">
+// from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('clock_txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+<script type="text/javascript">
 <!--
 $(document).ready(function() {
 
@@ -154,15 +178,14 @@ $(document).ready(function() {
 //-->
 </script>
 </head>
-
+<body onload="startTime()">
 <div class="clock">
-   <div></div>
       <ul>
       	 <li id='Date'></li>
       	 <li> - </li>
-         <li id="hours"></li>
-         <li id="point">:</li>
-         <li id="min"></li>
+         <li id="clock_txt"></li>
+         <!-- <li id="point">:</li>
+         <li id="min"></li> -->
          <!-- <li id="point">:</li> -->
          <!-- <li id="sec"></li> -->
       </ul>
@@ -183,7 +206,7 @@ $(document).ready(function() {
 					links: false,
 					controls: false,
 					effect: 'slideLeft',
-					speed: 5000,
+					speed: 10000,
 					cssClass: 'basicFeatures',
 					hoverPause: false 
 				}); });
